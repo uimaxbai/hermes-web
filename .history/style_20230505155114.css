@@ -30,6 +30,9 @@ body {
     from { border-color: transparent }
     to { border-color: black; }
 }
+@keyframes fade {
+    from {}
+}
 .typed-out-container {
     display: inline-block;
 }

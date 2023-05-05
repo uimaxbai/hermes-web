@@ -30,6 +30,7 @@ body {
     from { border-color: transparent }
     to { border-color: black; }
 }
+@keyframes 
 .typed-out-container {
     display: inline-block;
 }

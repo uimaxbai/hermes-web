@@ -30,6 +30,10 @@ body {
     from { border-color: transparent }
     to { border-color: black; }
 }
+@keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
 .typed-out-container {
     display: inline-block;
 }

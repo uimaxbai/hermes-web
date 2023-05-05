@@ -28,8 +28,8 @@ body {
 }
 @keyframes blink {
     from { border-color: transparent }
-    to { border-color: black; }
-}
+    to { border-color: orange; }
+  }
 .typed-out-container {
     display: inline-block;
 }
@@ -39,11 +39,8 @@ body {
     font-size: 10rem;
     width: 0;
     white-space: nowrap;
-    animation-delay: 0s, 1s, 0s;
     animation: 
-    typing 1s steps(17, end) forwards,
-    fade 1s,
-    blink .8s infinite;
+    typing 1s steps(17, end) forwards;
 }
 
 @media (prefers-color-scheme: dark) { /* Dark theme goes last */

@@ -39,10 +39,9 @@ body {
     font-size: 10rem;
     width: 0;
     white-space: nowrap;
-    animation-delay: 0s, 1s, 0s;
     animation: 
     typing 1s steps(17, end) forwards,
-    fade 1s,
+    fade 1s
     blink .8s infinite;
 }
 

@@ -22,29 +22,11 @@ html, body, .landing, .title {
 body {
     font-family: 'Rubik', system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 }
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-@keyframes blink {
-    from { border-color: transparent }
-    to { border-color: black; }
-}
-.typed-out-container {
-    display: inline-block;
-}
 .typed-out {
     overflow: hidden;
     border-right: .05em solid black;
     font-size: 10rem;
-    width: 0;
-    white-space: nowrap;
-    animation-delay: 0s, 1s, 0s;
-    animation: 
-    typing 1s steps(17, end) forwards,
-    fade 1s,
-    blink .8s infinite;
-}
+    width: 0;}
 
 @media (prefers-color-scheme: dark) { /* Dark theme goes last */
 
