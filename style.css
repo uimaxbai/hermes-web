@@ -6,6 +6,8 @@ html, body, .landing, .title {
     height: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 } /* Make page span full width and height */
 
 /* Predefine classes for divs */
@@ -42,9 +44,38 @@ body {
     animation-delay: 0s, 1s, 0s;
     animation: 
     typing 1s steps(17, end) forwards,
-    fade 1s,
     blink .8s infinite;
+    transition: 0.2s;
+    font-family: 'Roboto Mono',SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
+.description {
+    opacity: 0;
+    display: none;
+    font-size: xx-large;
+}
+
+/* Custom wavy divider */
+.custom-shape-divider-bottom-1683313045 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1683313045 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1683313045 .shape-fill {
+    fill: #FFFFFF;
+}
+
 
 @media (prefers-color-scheme: dark) { /* Dark theme goes last */
 
