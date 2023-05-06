@@ -6,5 +6,11 @@ function fadeCursor() { // fade cursor on type
     $(".description").animate({
         opacity: "1",
     });
+    $("#landingLogo").animate({
+        opacity: "1",
+    });
+    $(".nav-links-link").animate({
+        opacity: "1",
+    });
 }
 setTimeout(fadeCursor, 1200);

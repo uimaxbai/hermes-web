@@ -1,0 +1,153 @@
+:root {
+    --text-cursor-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body, .landing, .title {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+} /* Make page span full width and height */
+
+/* Predefine classes for divs */
+.absolute {
+    position: absolute;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    font-family: 'Rubik', system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: var(--text-cursor-color); }
+}
+.typed-out-container {
+    display: inline-block;
+}
+.landing {
+    color: white;
+    background-color: #2E1C6A;
+}
+.typed-out {
+    overflow: hidden;
+    border-right: .05em solid var(--text-cursor-color);
+    font-size: 10rem;
+    width: 0;
+    white-space: nowrap;
+    animation-delay: 0s, 1s, 0s;
+    animation: 
+    typing 1s steps(17, end) forwards,
+    blink .8s infinite;
+    transition: 0.2s;
+    font-family: 'Roboto Mono',SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+.description {
+    opacity: 0;
+    display: none;
+    font-size: xx-large;
+    margin-bottom: 10rem;
+}
+
+/* Custom wavy divider */
+.bottom-divider {
+  height: 200px; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear reverse infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    padding-left: 20px!important;
+    z-index: 9;
+    /* background: white; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links-link {
+    color: white;
+    font-size: xx-large;
+    text-decoration: none;
+    transition: 0.2s;
+    opacity: 0;
+}
+.nav-links-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+a, button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+a:hover, button:hover {
+    filter: brightness(90%);
+}
+.button-main {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 20px!important;
+    margin: 5px 0;
+    padding: 7px 10px;
+}
+.button-primary {
+    background: white;
+    color: navy;
+}
+
+
+
+@media (prefers-color-scheme: dark) { /* Dark theme goes last */
+
+}
