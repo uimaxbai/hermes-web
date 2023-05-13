@@ -1,2 +1,2 @@
-# decentralized-chat-web
-The website for Spartan Project's decentralized chat service. (including PHP code)
+# hermes-web
+The website for Spartan Project's decentralized chat service, Hermes. (including PHP code)
