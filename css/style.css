@@ -106,7 +106,8 @@ body {
     /* background: white; */
     height: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    align-content: flex-end;
     justify-content: space-between;
 }
 .nav-links {
@@ -144,8 +145,60 @@ a:hover, button:hover {
     color: navy;
 }
 
-
-
 @media (prefers-color-scheme: dark) { /* Dark theme goes last */
+    body {
+        background: #333;
+    }
+}
 
+@media (max-width: 1400px) {
+    .typed-out {
+        font-size: 8rem;
+    }
+}
+@media (max-width: 1150px) {
+    .typed-out {
+        font-size: 6rem;
+    }
+    .wave {
+        width: 500%;
+    }
+}
+@media (max-width: 900px) {
+    .typed-out {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 650px) {
+    .description {
+        font-size: x-large;
+    }
+}
+@media (max-width: 602px) {
+    .nav {
+        justify-content: center;
+    }
+    #landingLogo {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 550px) {
+    .typed-out {
+        font-size: xxx-large;
+    }
+}
+@media (max-width: 500px) {
+    .description {
+        font-size: large;
+    }
+}
+@media (max-width: 450px) {
+    .typed-out {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 400px) {
+    .typed-out {
+        font-size: xx-large;
+    }
 }

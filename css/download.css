@@ -20,3 +20,9 @@ hr {
     margin: 0;
     height: 50%!important;
 }
+@media (max-width: 602px) {
+    .nav {
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+}

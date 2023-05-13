@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hermes: Web Client</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%20Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/download.css">
+    <link rel="stylesheet" href="./css/web.css">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+    <nav class="nav">
+        <a href="/" id="landingLogo" style="height: 100%; margin-right: 10px;"><img src="./assets/logo/logo-transparent.svg"
+                alt="Hermes Logo" style="height: 100%;"></a>
+        <div class="nav-links">
+            <!-- <a class="nav-links-link" href="#">Hey</a> -->
+            <button class="button-main button-secondary" onclick="window.location.href='./download.html';">DOWNLOAD</button>
+        </div>
+    </nav>
+    <div class="landing">
+        <div class="container">
+            <py-config>
+                packages = ["utils"]
+            </py-config>
+
+            <py-script>
+                # Import socket module
+                import socket,json
+                print("""                                                                                                                            
+                                          ,,    ,,                                                                                           
+                                          ,,,, %,             ,,,      ,,,   ,,,,,,,,,  #,,,,,,,,     ,,,,       ,,,   ,,,,,,,,,,   ,,,,,,,,
+                           ,,,,,((,,,,,,,    ,,,  /////       ,,,      ,,,   ,,,        #,,,   ,,,,   ,,,,,    ,,,,,   ,,,*        ,,,      
+                         ,  ,,,,   &//*          %/// //      ,,,,,,,,,,,,   ,,,,,,,,   #,,,   %,,,   ,,,,,,  ,,,,,,   ,,,,,,,,,   ,,,,,%   
+                        ,,   ///           ////////////       ,,,######,,,   ,,,        #,,,,,,,,    (,,% ,,,,,,  ,,,  ,,,*           *,,,,,
+                                ,,,,    ,,,                   ,,,      ,,,   ,,,        #,,,  ,,,,   ,,,   ,,,,   ,,,  ,,,*              ,,,
+                            ,,,       ,,,  ,                  ,,,      ,,,   ,,,,,,,,,, #,,,    ,,,, ,,,          ,,,  ,,,,,,,,,, ,,,,,,,,, 
+                ,,,,,,,,,,           ,    ,,                                                                                                """)
+                print("Hermes is in a very early stage of development.\nMany things, especially the web client, may not work.")
+                
+                class util:
+                    def name() -> str:
+                        return "werdl"
+            
+                def Main():
+                    # local host IP '127.0.0.1'
+                    host = '127.0.0.1'
+            
+                    # Define the port on which you want to connect
+                    port = 8082
+                
+                    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+                
+                    # connect to server on local computer
+                    s.connect((host,port))
+                    print("util.name()")
+                    # message you send to server
+                    userin=input("Message: ")
+                    message = f"{util.name()} >> {userin} <~~>werdl"
+                    while True:
+                        # message sent to server
+                        s.send(message.encode())
+                
+                        # message received from server
+                        data = s.recv(1024)
+                        # print the received message
+                        # here it would be a reverse of sent message
+                        print('Received from the server :',str(data.decode('ascii')))
+                
+                        # ask the client whether he wants to continue
+                        # close the connection
+                        break
+                
+                        s.close()
+                    if __name__ == '__main__':
+                        Main()
+            </py-script>
+        </div>
+        
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="https://kit.fontawesome.com/049529442a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
