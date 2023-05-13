@@ -1,0 +1,22 @@
+.nav {
+    top: 0;
+    bottom: auto;
+}
+.landing {
+    height: calc(100% - 100px);
+    position: absolute;
+    bottom: 0;
+}
+.description {
+    display: initial;
+    opacity: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+hr {
+    border-right: 1px solid lightgray;
+    opacity: 0.5;
+    margin: 0;
+    height: 50%!important;
+}

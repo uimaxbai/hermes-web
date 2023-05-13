@@ -27,6 +27,8 @@ html, body, .landing, .title {
 
 body {
     font-family: 'Rubik', system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+    color: white!important;
+    background-color: #2E1C6A!important;
 }
 @keyframes typing {
     from { width: 0 }
@@ -38,10 +40,6 @@ body {
 }
 .typed-out-container {
     display: inline-block;
-}
-.landing {
-    color: white;
-    background-color: #2E1C6A;
 }
 .typed-out {
     overflow: hidden;

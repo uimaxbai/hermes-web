@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -20,6 +16,7 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/download.css">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
@@ -38,37 +35,29 @@ session_start();
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
     <nav class="nav">
-        <a href="/" id="landingLogo" style="height: 100%; opacity: 0;"><img src="./assets/logo/logo-transparent.svg"
+        <a href="/" id="landingLogo" style="height: 100%;"><img src="./assets/logo/logo-transparent.svg"
                 alt="Hermes Logo" style="height: 100%;"></a>
         <div class="nav-links">
             <!-- <a class="nav-links-link" href="#">Hey</a> -->
             <button class="button-main button-secondary" onclick="window.location.href='./web.php';">WEB CLIENT</button>
-            <button class="button-main button-primary" onclick="window.location.href='./download.html';">DOWNLOAD <i
-                    class="fa-solid fa-arrow-right" style="margin-left: 2px;"></i></button>
         </div>
     </nav>
     <div class="landing">
-        <div class="absolute center title">
+        <div class="absolute center title" style="flex-direction: column;">
             <div class="typed-out-container">
                 <div class="typed-out">
-                    Decentralized.
+                    Downloading...
                 </div>
-                <div class="description">
-                    That's all our chatting service is. Simple.
-                </div>
+            </div>
+            <div class="description">
+                <span>Didn't start? Click <a href="https://github.com/spartanproj/hermes/archive/refs/heads/master.zip">here</a>.</span> <!-- <hr> <a href="">Latest Dev version</a> --> <hr> <span>Try it out online <a href="./web.php">here</a>.</span>
             </div>
         </div>
     </div>
 
-    <div class="bottom-divider">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-
-
 
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/main.js" async defer></script>
+    <script src="./js/download.js" async defer></script>
     <script src="https://kit.fontawesome.com/049529442a.js" crossorigin="anonymous"></script>
 </body>
 
