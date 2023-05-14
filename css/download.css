@@ -27,3 +27,6 @@ hr {
         align-items: flex-start;
     }
 }
+body {
+    height: 100%;
+}
