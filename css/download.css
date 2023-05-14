@@ -1,6 +1,7 @@
 .nav {
     top: 0;
     bottom: auto;
+    margin: 0;
 }
 .landing {
     height: calc(100% - 100px);
