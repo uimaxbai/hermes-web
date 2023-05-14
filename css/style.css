@@ -5,7 +5,7 @@
 * {
     box-sizing: border-box;
 }
-html, body, .landing, .title {
+html {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -15,6 +15,10 @@ html, body, .landing, .title {
     position: absolute;
     top: 0;
     left: 0;
+}
+.landing, .title {
+    height: 100vh;
+    width: 100%;
 }
 
 /* Predefine classes for divs */
@@ -35,6 +39,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 200%;
+    padding: 0;
+    margin: 0;
 }
 @keyframes typing {
     from { width: 0 }
@@ -229,6 +237,12 @@ display: none;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+.page-1 {
+    height: 100vh;
+}
+.buzzwords {
+    transform: rotate(90deg);
 }
 
 @media (prefers-color-scheme: dark) { /* Dark theme goes last */
