@@ -166,6 +166,7 @@ a:hover, button:hover {
     flex-direction: column;
     z-index: 99999;
     align-items: flex-end;
+    opacity: 0;
 }
 .mouse {
     border: 4px solid white;

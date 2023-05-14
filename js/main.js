@@ -12,5 +12,8 @@ function fadeCursor() { // fade cursor on type
     $(".nav-links-link").animate({
         opacity: "1",
     });
+    $(".scroll-down").animate({
+        opacity: "1",
+    });
 }
 setTimeout(fadeCursor, 1200);
